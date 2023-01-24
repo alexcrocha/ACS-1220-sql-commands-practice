@@ -1,5 +1,5 @@
 /*
- * TODO: Create a table called 'songs' that has the following fields:
+ * Create a table called 'songs' that has the following fields:
  * - id - integer, primary key
  * - name - string
  * - album_id - foreign key
@@ -22,7 +22,7 @@ CREATE TABLE Albums (
 );
 
 /*
- * TODO: Insert at least 4 rows of data into the songs table. You can change up the albums as well. :)
+ * Insert at least 4 rows of data into the songs table. You can change up the albums as well. :)
  */
  INSERT INTO Songs
      (name, album_id)
@@ -46,12 +46,12 @@ CREATE TABLE Albums (
 
 --
 
-/* TODO: Write a query here to select all songs */
+/* Write a query here to select all songs */
 
 SELECT * FROM Albums;
 
 /*
- * TODO: Write a table join query to construct a table of Song Name : Album Name
+ * Write a table join query to construct a table of Song Name : Album Name
  */
 
 SELECT Songs.name AS Songs, Albums.name AS Albums
@@ -61,14 +61,14 @@ ON Albums.id = Songs.album_id;
 
 
 /*
- * TODO: Find all albums published between 1970 and 1980.
+ * Find all albums published between 1970 and 1980.
  */
 SELECT *
 FROM Albums
 WHERE year_published BETWEEN 1970 AND 1980;
 
 /*
- * TODO: Find all songs on albums published between 1970 and 1980.
+ * Find all songs on albums published between 1970 and 1980.
  *(Hint: Use a table join.)
  */
 
@@ -79,7 +79,7 @@ ON Albums.id = Songs.album_id
 WHERE year_published BETWEEN 1970 AND 1980;
 
 /*
- * TODO: Find all songs on albums with names containing 'California'.
+ * Find all songs on albums with names containing 'California'.
  */
 
 SELECT Songs.name AS Songs, Albums.name AS Albums
